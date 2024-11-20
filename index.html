@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaedenoyado | 枫之宿 | 楓の宿</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebcd; /* 枫叶的温暖颜色 */
+            background-image: url('https://www.transparenttextures.com/patterns/fallen-leaves.png'); /* 枫叶背景纹理 */
+            background-repeat: repeat;
+            color: #333;
+        }
+        header {
+            background-color: #d2691e; /* 枫叶深橙色 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button-group {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button-group button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d2691e;
+            color: white;
+            cursor: pointer;
+        }
+        .button-group button:hover {
+            background-color: #c3561a;
+        }
+        .language-section {
+            display: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d2691e;
+            color: white;
+        }
+        /* 网格布局样式 */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        let currentLang = 'english'; // 默认显示英文
+
+        function showLanguage(lang) {
+            // 隐藏所有语言内容
+            const sections = document.querySelectorAll('.language-section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // 显示选中语言
+            currentLang = lang;
+            document.getElementById(lang).style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showLanguage('english')"> <!-- 默认显示英文 -->
+    <header>
+        <h1 id="title">Kaedenoyado | 枫之宿 | 楓の宿</h1>
+    </header>
+
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="button-group">
+            <button onclick="showLanguage('chinese')">中文</button>
+            <button onclick="showLanguage('japanese')">日本語</button>
+            <button onclick="showLanguage('english')">English</button>
+        </div>
+
+        <!-- 中文版本 -->
+        <div class="language-section" id="chinese">
+            <h2>枫之宿</h2>
+            <p>此房源位于大阪，离最大的中央市场步行3分钟，您可以在这里品尝到最新鲜最便宜的海鲜，里面还有一家在当地非常有名的寿司店（需要提前去排队）。</p>
+            <p>民宿里配备了高端床和床垫，羽绒被和羽绒枕以及各种高端的洗漱用品。在住宿期间，您还可以在榻榻米房间里边观看日式小庭院边享受日式茶道和和服体验。</p>
+            <p>分为一号馆和二号馆，日式民宿，面积60平米，里面一个洋室房间，有两张1.4米的双人床。一个榻榻米房间可以睡三个人，客厅里有一个塌塌米茶室，可以放两个榻榻被褥，最多可入住九人。</p>
+
+            <!-- 图片网格展示 -->
+            <div class="image-gallery">
+                <img src="https://i.imgur.com/iQ331Ls.jpg" alt="Guesthouse Image 1">
+                <img src="https://i.imgur.com/q0tLAOc.jpg" alt="Guesthouse Image 2">
+                <img src="https://i.imgur.com/XuCrRAS.jpg" alt="Guesthouse Image 3">
+                <img src="https://i.imgur.com/iEWr04z.jpg" alt="Guesthouse Image 4">
+            </div>
+        </div>
+
+        <!-- 日语版本 -->
+        <div class="language-section" id="japanese">
+            <h2>楓の宿</h2>
+            <p>この宿泊施設は大阪にあり、最大の中央市場から徒歩3分です。ここでは新鮮で安価なシーフードを味わうことができ、地元で非常に有名な寿司店もあります（早めに行列に並ぶ必要があります）。</p>
+            <p>高級なベッド、マットレス、羽毛布団、羽毛枕、高級なアメニティが備わっています。滞在中は畳の部屋で日本庭園を眺めながら、日本の茶道や着物体験をお楽しみいただけます。</p>
+            <p>一号館と二号館に分かれており、和風宿泊施設で、面積は60平米です。1つの洋室には1.4メートルのダブルベッドが2台あり、畳の部屋では3人が就寝可能です。リビングには畳の茶室があり、2つの布団を敷くことができ、最大9人まで宿泊可能です。</p>
+
+            <!-- 图片网格展示 -->
+            <div class="image-gallery">
+                <img src="https://i.imgur.com/iQ331Ls.jpg" alt="Guesthouse Image 1">
+                <img src="https://i.imgur.com/q0tLAOc.jpg" alt="Guesthouse Image 2">
+                <img src="https://i.imgur.com/XuCrRAS.jpg" alt="Guesthouse Image 3">
+                <img src="https://i.imgur.com/iEWr04z.jpg" alt="Guesthouse Image 4">
+            </div>
+        </div>
+
+        <!-- 英文版本 -->
+        <div class="language-section" id="english">
+            <h2>Kaedenoyado</h2>
+            <p>This property is located in Osaka, a 3-minute walk from the largest central market. You can enjoy the freshest and cheapest seafood here, and there is a very famous sushi restaurant in the area (be sure to queue up early).</p>
+            <p>The guesthouse is equipped with high-end beds, mattresses, down comforters, down pillows, and premium toiletries. During your stay, you can enjoy a Japanese tea ceremony and kimono experience in a tatami room overlooking a small Japanese garden.</p>
+            <p>The guesthouse has two buildings: Building 1 and Building 2. Each is a Japanese-style inn covering 60 square meters. Inside, there is one Western-style room with two 1.4-meter double beds. The tatami room can accommodate three people, and the living room has a tatami tea room with space for two more futons, making the maximum capacity nine people.</p>
+
+            <!-- 图片网格展示 -->
+            <div class="image-gallery">
+                <img src="https://i.imgur.com/iQ331Ls.jpg" alt="Guesthouse Image 1">
+                <img src="https://i.imgur.com/q0tLAOc.jpg" alt="Guesthouse Image 2">
+                <img src="https://i.imgur.com/XuCrRAS.jpg" alt="Guesthouse Image 3">
+                <img src="https://i.imgur.com/iEWr04z.jpg" alt="Guesthouse Image 4">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact us | お問い合わせ | 联系我们: +81 070-2610-9074 | xuping201013@gmail.com</p>
+    </footer>
+</body>
+</html>
